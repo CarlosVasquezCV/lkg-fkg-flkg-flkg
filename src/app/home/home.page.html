@@ -1,0 +1,48 @@
+
+<ion-content [fullscreen]="true">
+
+  
+
+  <ion-card id="color-fondo-uno" class="ion-text-center">
+    
+    <ion-button color="success" class="tres-botones">Formación</ion-button>
+    <ion-button color="success" class="tres-botones">Coordinación</ion-button>
+    <ion-button color="success" class="tres-botones">Novedades</ion-button>
+    <ion-button color="success" class="tres-botones">Otros</ion-button>
+    <ion-item>
+      <ion-label id="color-texto-noticias" color="primary">Noticias</ion-label>
+    </ion-item>
+
+
+
+
+</ion-card>
+
+<ion-card id="color-fondo-dos">
+
+  <!--tarjetas-->
+  <ion-card *ngFor="let notis of listNoticias">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <img src="{{notis.url_imag}}" alt="">
+        </ion-col>
+        <ion-col size="8">
+          <ion-card-header>
+            <ion-card-title color="primary"><h3>{{notis.title}}</h3></ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content style="text-decoration: prymary;">
+            <p style="font-size: 10px;">{{notis.text_small}}.</p> 
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+
+  
+
+</ion-card>
+
+</ion-content>
